@@ -14,7 +14,7 @@
 import BrowseCardText from './BrowseCardText';
 import LoadingImage from '../atoms/LoadingImage';
 
-export default{
+export default {
   components: {
     LoadingImage, BrowseCardText
   },
@@ -29,7 +29,7 @@ export default{
     },
     texts: {
       type: Array,
-      default(){ }
+      default() {}
     },
     id: {
       type: Number,
@@ -43,7 +43,7 @@ export default{
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .card{
     display:        flex;
     flex-direction: column;

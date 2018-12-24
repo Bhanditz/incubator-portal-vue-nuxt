@@ -3,12 +3,13 @@
     class="inner">
     <div
       class="inner-text">
-      <p
-        v-if="linkText"
-        class="ellipsis">
+
+      <MultiLineEllipsis
+        v-if="linkText">
         <nuxt-link
-          :to="{ path: url }">{{ linkText }}</nuxt-link>
-      </p>
+          :to="{ path: url }" >{{ linkText }}</nuxt-link>
+      </MultiLineEllipsis>
+
       <p v-if="texts">
         <span
           v-for="item in texts"
@@ -21,7 +22,13 @@
 </template>
 
 <script>
+
+import MultiLineEllipsis from '../atoms/MultiLineEllipsis';
+
 export default{
+  components:{
+    MultiLineEllipsis
+  },
   props: {
     linkText: {
       type: String,
@@ -29,7 +36,7 @@ export default{
     },
     texts: {
       type: Array,
-      default(){}
+      default() {}
     },
     url: {
       type: String,
@@ -39,10 +46,16 @@ export default{
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .inner{
     display: flex;
     padding: 1rem;
     position: relative;
   }
+
+  .ellipsis{
+    line-height: 1.8em;
+    max-height:  4.6em;
+  }
+
 </style>
