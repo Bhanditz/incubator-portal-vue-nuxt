@@ -5,19 +5,56 @@
       <h1 class="title">
         Transforming the world with {{ what }}
       </h1>
+      <CardSet :card-data="cardData" />
     </div>
   </section>
 </template>
 
 <script>
 import EuropeanaCollectionsLogo from '~/components/EuropeanaCollectionsLogo.vue';
+import CardSet from '~/components/organisms/CardSet';
+
+const cardData = [{
+  id: 1,
+  thumbnail: '/img/storybook/card-img-1.jpg',
+  linkText: 'The card link text - the card link text - the card link text - the card link text - the card link text',
+  texts: ['1786 - 1849', '1850 - 1881'],
+  url: '~/cards/1'
+},
+{
+  id: '2',
+  thumbnail: '/img/storybook/card-img-2.jpg',
+  linkText: 'The card link text - the card link text - the card link text - the card link text - the card link text',
+  texts: ['1837 - 1901'],
+  url: '/cards/2'
+},
+{
+  id: '3',
+  thumbnail: '/img/storybook/card-img-3.jpg',
+  linkText: 'The card link text - the card link text - the card link text - the card link text - the card link text',
+  texts: ['1870 - 1920'],
+  url: '/cards/3'
+},
+{
+  id: '4',
+  thumbnail: '/img/storybook/card-img-4.jpg',
+  linkText: 'The card link text - the card link text - the card link text - the card link text - the card link text',
+  texts: ['1870 - 1920'],
+  url: '/cards/4'
+}];
 
 export default {
   asyncData (context) {
     return { what: (context.query.what ? context.query.what : 'culture') };
   },
   components: {
-    EuropeanaCollectionsLogo
+    EuropeanaCollectionsLogo,
+    CardSet
+  },
+  computed: {
+    cardData() {
+      return cardData;
+    }
   }
 };
 </script>

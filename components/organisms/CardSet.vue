@@ -1,7 +1,7 @@
 <template>
   <div class="card-set">
     <Card
-      v-for="card in cardData"
+      v-for="card in CardData"
       :key="card.id"
       :thumbnail="card.thumbnail"
       :link-text="card.linkText"
@@ -18,13 +18,12 @@ import Card from '../molecules/Card';
 export default{
   components: { Card },
   props: {
-    cardData: {
+    CardData: {
       type: Array,
       default(){ }
     }
   }
 };
-
 </script>
 
 

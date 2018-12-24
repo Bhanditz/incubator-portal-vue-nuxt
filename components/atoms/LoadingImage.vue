@@ -4,7 +4,7 @@
     :style="[ isLoaded ? { 'backgroundImage': 'url(' + thumbnail + ')' } : {} ]"
     :class="[ isLoaded ? 'card-img' : 'card-img loading']">
     <img
-      v-show="false"
+      v-show="isLoaded"
       :src="thumbnail"
       @load="imgLoaded">
   </nuxt-link>

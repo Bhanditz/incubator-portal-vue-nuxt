@@ -31,6 +31,10 @@ export default{
       type: Array,
       default(){ }
     },
+    id: {
+      type: Number,
+      default: 0
+    },
     url: {
       type: String,
       default: ''
