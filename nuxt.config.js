@@ -27,13 +27,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    'vuetify/dist/vuetify.min.css',
+    '@/assets/scss/style.scss'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: ['~plugins/vuetify.js'],
 
   /*
   ** Nuxt.js modules
@@ -56,6 +57,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    vendor: ['vuetify'],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
