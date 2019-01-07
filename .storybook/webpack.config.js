@@ -1,5 +1,13 @@
+const path = require('path');
+
 module.exports = {
   mode: 'development',
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, '../assets')
+    },
+    extensions: ['.js', '.jsx', '.css', '.png', '.jpg', '.gif', '.jpeg', '.svg'],
+  },
   module: {
     rules: [
 
@@ -24,7 +32,16 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+
+      {
+        test: /\.svg$/,
+        loader: 'svg-url-loader', 
+        options: {
+          noquotes: true
+        }
       }
+
     ]
   }
 }

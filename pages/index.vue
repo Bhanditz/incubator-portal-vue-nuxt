@@ -6,6 +6,22 @@
         Transforming the world with {{ what }}
       </h1>
     </div>
+    <v-btn>This is a button</v-btn>
+
+    <v-card>
+      <v-img
+        class="white--text"
+        height="200px"
+        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+      />
+      <v-card-title>
+        <h4 class="text-uppercase">Collection</h4>
+      </v-card-title>
+      <v-card-title>
+        <h3>This is the title</h3>
+      </v-card-title>
+    </v-card>
+
   </section>
 </template>
 
