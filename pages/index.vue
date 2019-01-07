@@ -1,26 +1,82 @@
 <template>
   <section class="container">
-    <div>
-      <EuropeanaCollectionsLogo />
-      <h1 class="title">
-        Transforming the world with {{ what }}
-      </h1>
-    </div>
-    <v-btn>This is a button</v-btn>
-
-    <v-card>
-      <v-img
-        class="white--text"
-        height="200px"
-        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-      />
-      <v-card-title>
-        <h4 class="text-uppercase">Collection</h4>
-      </v-card-title>
-      <v-card-title>
-        <h3>This is the title</h3>
-      </v-card-title>
-    </v-card>
+    <b-container>
+      <b-row>
+        <b-col>
+          <EuropeanaCollectionsLogo />
+          <h1 class="title">
+            Transforming the world with {{ what }}
+          </h1>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
+          <b-card
+            title="Card Title"
+            img-src="https://picsum.photos/600/300/?image=25"
+            img-alt="Image"
+            img-top
+            tag="article"
+            class="mb-2">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <b-button
+              href="#"
+              variant="primary">Go somewhere</b-button>
+          </b-card>
+        </b-col>
+        <b-col>
+          <b-card
+            title="Card Title"
+            img-src="https://picsum.photos/600/300/?image=25"
+            img-alt="Image"
+            img-top
+            tag="article"
+            class="mb-2">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <b-button
+              href="#"
+              variant="primary">Go somewhere</b-button>
+          </b-card>
+        </b-col>
+        <b-col>
+          <b-card
+            title="Card Title"
+            img-src="https://picsum.photos/600/300/?image=25"
+            img-alt="Image"
+            img-top
+            tag="article"
+            class="mb-2">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <b-button
+              href="#"
+              variant="primary">Go somewhere</b-button>
+          </b-card>
+        </b-col>
+        <b-col>
+          <b-card
+            title="Card Title"
+            img-src="https://picsum.photos/600/300/?image=25"
+            img-alt="Image"
+            img-top
+            tag="article"
+            class="mb-2">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <b-button
+              href="#"
+              variant="primary">Go somewhere</b-button>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
 
   </section>
 </template>
@@ -39,14 +95,6 @@ export default {
 </script>
 
 <style>
-
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,

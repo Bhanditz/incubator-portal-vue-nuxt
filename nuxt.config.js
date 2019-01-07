@@ -27,21 +27,21 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'vuetify/dist/vuetify.min.css',
     '@/assets/scss/style.scss'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~plugins/vuetify.js'],
+  plugins: [],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'bootstrap-vue/nuxt'
   ],
   /*
   ** Axios module configuration
@@ -57,7 +57,6 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    vendor: ['vuetify'],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
