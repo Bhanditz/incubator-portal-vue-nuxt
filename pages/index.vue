@@ -11,69 +11,16 @@
       </b-row>
       <b-row>
         <b-col>
-          <b-card
-            title="Card Title"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            class="mb-2">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </p>
-            <b-button
-              href="#"
-              variant="primary">Go somewhere</b-button>
-          </b-card>
+          <ContentCard />
         </b-col>
         <b-col>
-          <b-card
-            title="Card Title"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            class="mb-2">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </p>
-            <b-button
-              href="#"
-              variant="primary">Go somewhere</b-button>
-          </b-card>
+          <ContentCard />
         </b-col>
         <b-col>
-          <b-card
-            title="Card Title"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            class="mb-2">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </p>
-            <b-button
-              href="#"
-              variant="primary">Go somewhere</b-button>
-          </b-card>
+          <ContentCard />
         </b-col>
         <b-col>
-          <b-card
-            title="Card Title"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            class="mb-2">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </p>
-            <b-button
-              href="#"
-              variant="primary">Go somewhere</b-button>
-          </b-card>
+          <ContentCard />
         </b-col>
       </b-row>
     </b-container>
@@ -83,13 +30,15 @@
 
 <script>
 import EuropeanaCollectionsLogo from '~/components/EuropeanaCollectionsLogo.vue';
+import ContentCard from '~/components/ContentCard.vue';
 
 export default {
   asyncData (context) {
     return { what: (context.query.what ? context.query.what : 'culture') };
   },
   components: {
-    EuropeanaCollectionsLogo
+    EuropeanaCollectionsLogo,
+    ContentCard
   }
 };
 </script>
